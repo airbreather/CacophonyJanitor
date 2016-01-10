@@ -222,16 +222,16 @@ public abstract class ItemQuestRewardRecipe implements IRecipe
 			this.appendItem(tagList, slot++, "TConstruct", "materials", 12, 10);
 			this.appendItem(tagList, slot++, "BiomesOPlenty", "misc", 10, 1);
 			this.appendItem(tagList, slot++, "ThermalFoundation", "material", 131, 2);
-			this.appendItem(tagList, slot++, "TotemDefender", "ironDamageUpgrade", 0, 9);
+			this.appendItem(tagList, slot++, "TMechworks", "LengthWire", 0, 9);
 			this.appendItem(tagList, slot++, "minecraft", "fire", 0, 1);
 			this.appendItem(tagList, slot++, "minecraft", "fire", 0, 1);
 			this.appendItem(tagList, slot++, "primitivemobs", "primitivemobs_TarBall", 0, 6);
 			this.appendItem(tagList, slot++, "TConstruct", "materials", 12, 8);
-			this.appendItem(tagList, slot++, "TotemDefender", "ironDamageUpgrade", 0, 9);
+			this.appendItem(tagList, slot++, "TMechworks", "LengthWire", 0, 9);
 			this.appendItem(tagList, slot++, "BiomesOPlenty", "misc", 1, 15);
 			this.appendItem(tagList, slot++, "minecraft", "bone", 0, 2);
 			this.appendItem(tagList, slot++, "BiomesOPlenty", "misc", 3, 29);
-			this.appendItem(tagList, slot++, "ThermalFoundation", "material", 514, 6);
+			this.appendItem(tagList, slot++, "ThermalExpansion", "material", 514, 6);
 			this.appendItem(tagList, slot++, "minecraft", "fire", 0, 1);
 		}
 	}
