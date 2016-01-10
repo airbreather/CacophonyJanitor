@@ -1,0 +1,10 @@
+[{
+    "modid": "cacophonyjanitor",
+    "name": "Cacophony Janitor",
+    "description": "The guy who has to do the dirty work so that everyone else can live and work in a clean and productive environment.",
+    "version": "${mod_version}",
+    "mcversion": "${minecraft_version}-${forge_version}",
+    "url": "https://github.com/airbreather/cacophonyjanitor",
+    "authors": [ "airbreather" ],
+    "dependencies": []
+}]
