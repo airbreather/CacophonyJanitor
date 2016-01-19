@@ -25,17 +25,4 @@ public final class CacophonyJanitorMod
 		GameRegistry.registerItem(ItemQuestRewardProxy.RivalryLunch, CacophonyJanitorConstants.rivalryLunchProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.SmokingBox, CacophonyJanitorConstants.smokingBoxProxyItemID, CacophonyJanitorConstants.modID);
 	}
-
-	@Mod.EventHandler
-	private void init(FMLInitializationEvent event)
-	{
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.ViolenceLunch());
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.IndolenceLunch());
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.PassionLunch());
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.HungerLunch());
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.DoggieBag());
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.RivalryLunch());
-		GameRegistry.addRecipe(new ItemQuestRewardRecipe.SmokingBox());
-		RecipeSorter.register("cacophonyjanitor:questrewardproxy", ItemQuestRewardRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
-	}
 }
