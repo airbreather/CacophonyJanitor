@@ -9,7 +9,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.RecipeSorter;
 
 @Mod(modid = CacophonyJanitorConstants.modID, name = CacophonyJanitorConstants.modName)
@@ -19,7 +18,6 @@ public final class CacophonyJanitorMod
 	private void preInit(FMLPreInitializationEvent event)
 	{
 		CacophonyJanitorConfiguration.init(event.getSuggestedConfigurationFile());
-		MinecraftForge.EVENT_BUS.register(new SquidSpawnLimiter());
 		GameRegistry.registerItem(ItemQuestRewardProxy.ViolenceLunch, CacophonyJanitorConstants.violenceLunchProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.IndolenceLunch, CacophonyJanitorConstants.indolenceLunchProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.PassionLunch, CacophonyJanitorConstants.passionLunchProxyItemID, CacophonyJanitorConstants.modID);
