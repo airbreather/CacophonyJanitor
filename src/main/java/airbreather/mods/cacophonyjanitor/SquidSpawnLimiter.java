@@ -1,7 +1,6 @@
 package airbreather.mods.cacophonyjanitor;
 
 import net.minecraft.entity.passive.EntitySquid;
-import net.minecraft.world.World;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
