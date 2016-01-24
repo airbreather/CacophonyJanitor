@@ -17,7 +17,6 @@ public final class CacophonyJanitorMod
 	@Mod.EventHandler
 	private void preInit(FMLPreInitializationEvent event)
 	{
-		CacophonyJanitorConfiguration.init(event.getSuggestedConfigurationFile());
 		GameRegistry.registerItem(ItemQuestRewardProxy.ViolenceLunch, CacophonyJanitorConstants.violenceLunchProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.IndolenceLunch, CacophonyJanitorConstants.indolenceLunchProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.PassionLunch, CacophonyJanitorConstants.passionLunchProxyItemID, CacophonyJanitorConstants.modID);
