@@ -1,16 +1,10 @@
 package airbreather.mods.cacophonyjanitor;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.oredict.RecipeSorter;
 
 @Mod(modid = CacophonyJanitorConstants.modID, name = CacophonyJanitorConstants.modName)
 public final class CacophonyJanitorMod
@@ -25,7 +19,11 @@ public final class CacophonyJanitorMod
 		GameRegistry.registerItem(ItemQuestRewardProxy.DoggieBag, CacophonyJanitorConstants.doggieBagProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.RivalryLunch, CacophonyJanitorConstants.rivalryLunchProxyItemID, CacophonyJanitorConstants.modID);
 		GameRegistry.registerItem(ItemQuestRewardProxy.SmokingBox, CacophonyJanitorConstants.smokingBoxProxyItemID, CacophonyJanitorConstants.modID);
+	}
 
-		MinecraftForge.EVENT_BUS.register(new TwilightForestAquaticAbyssGate());
+	@Mod.EventHandler
+	private void postInit(FMLPostInitializationEvent event)
+	{
+		CompatibilityTweaks.runAll();
 	}
 }
