@@ -2,6 +2,7 @@ package airbreather.mods.cacophonyjanitor;
 
 import java.util.ArrayList;
 
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 
@@ -20,6 +21,10 @@ final class CompatibilityTweaks
 		// Aquatic Abyss goes a little bit overboard on all the biomes its fish
 		// can spawn in... Twilight Forest biomes prove to be problematic.
 		removeAquaticAbyssSpawnsFromTwilightForestBiomes();
+
+		// Adding in Squidless seems to have made nautilus really take over.
+		// let's decrease these critters below squids.
+		decreaseNautilusSpawnRate();
 	}
 
 	private static void removeAquaticAbyssSpawnsFromTwilightForestBiomes()
@@ -49,6 +54,31 @@ final class CompatibilityTweaks
 		catch (ClassNotFoundException ex)
 		{
 			// means they removed Twilight Forest... I mean, good luck, but...
+		}
+	}
+
+	private static void decreaseNautilusSpawnRate()
+	{
+		try
+		{
+			Class<? extends EntityLiving> nautilusClazz = (Class<? extends EntityLiving>)Class.forName("mods.fossil.entity.mob.EntityNautilus");
+			BiomeGenBase[] spawnBiomes = new BiomeGenBase[]
+			{
+				BiomeGenBase.river,
+				BiomeGenBase.ocean
+			};
+
+			EntityRegistry.removeSpawn(nautilusClazz, EnumCreatureType.waterCreature, spawnBiomes);
+
+			// unadulterated spawn is 5, 4, 14
+			// vanilla squid spawn is 10, 4, 4
+			// squidless changes ^ to 10, 2, 2 (I think)
+			// so let's make nautilus 5, 2, 2
+			// this should hopefully average out to 1 nautilus for every 2 squids
+			EntityRegistry.addSpawn(nautilusClazz, 5, 2, 2, EnumCreatureType.waterCreature, spawnBiomes);
+		}
+		catch (ClassNotFoundException ex)
+		{
 		}
 	}
 }
