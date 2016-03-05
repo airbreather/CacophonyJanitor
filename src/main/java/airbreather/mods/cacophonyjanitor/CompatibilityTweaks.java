@@ -73,9 +73,8 @@ final class CompatibilityTweaks
 			// unadulterated spawn is 5, 4, 14
 			// vanilla squid spawn is 10, 4, 4
 			// squidless changes ^ to 10, 2, 2 (I think)
-			// so let's make nautilus 5, 2, 2
-			// this should hopefully average out to 1 nautilus for every 2 squids
-			EntityRegistry.addSpawn(nautilusClazz, 5, 2, 2, EnumCreatureType.waterCreature, spawnBiomes);
+			// so let's make nautilus 2, 1, 2
+			EntityRegistry.addSpawn(nautilusClazz, 2, 1, 2, EnumCreatureType.waterCreature, spawnBiomes);
 		}
 		catch (ClassNotFoundException ex)
 		{
